@@ -6,6 +6,7 @@
       <module fileurl="file://$PROJECT_DIR$/../common-api/common-api.iml" filepath="$PROJECT_DIR$/../common-api/common-api.iml" />
       <module fileurl="file://$PROJECT_DIR$/../discovery-service/discovery-service.iml" filepath="$PROJECT_DIR$/../discovery-service/discovery-service.iml" />
       <module fileurl="file://$PROJECT_DIR$/../gateway-service/gateway-service.iml" filepath="$PROJECT_DIR$/../gateway-service/gateway-service.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../matriculation-service/matriculation-service.iml" filepath="$PROJECT_DIR$/../matriculation-service/matriculation-service.iml" />
       <module fileurl="file://$PROJECT_DIR$/../radar-service/radar-service.iml" filepath="$PROJECT_DIR$/../radar-service/radar-service.iml" />
     </modules>
   </component>

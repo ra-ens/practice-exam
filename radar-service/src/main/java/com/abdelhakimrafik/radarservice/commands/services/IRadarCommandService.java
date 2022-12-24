@@ -1,14 +1,14 @@
 package com.abdelhakimrafik.radarservice.commands.services;
 
-import com.abdelhakimrafik.commonapi.queries.radar.CreateRadarRequest;
-import com.abdelhakimrafik.commonapi.queries.radar.DeleteRadarRequest;
-import com.abdelhakimrafik.commonapi.queries.radar.UpdateRadarRequest;
+import com.abdelhakimrafik.commonapi.queries.RadarQuery;
 
 import java.util.concurrent.CompletableFuture;
 
 public interface IRadarCommandService {
 
-    CompletableFuture<String> createRadar(CreateRadarRequest request);
-    CompletableFuture<String> updateRadar(UpdateRadarRequest request);
-    CompletableFuture<String> deleteRadar(DeleteRadarRequest request);
+    CompletableFuture<String> createRadar(RadarQuery.CreateRadar query);
+    CompletableFuture<String> updateRadar(RadarQuery.UpdateRadar query);
+    CompletableFuture<String> updateRadarStatus(RadarQuery.UpdateRadarStatus query);
+    CompletableFuture<String> deleteRadar(RadarQuery.DeleteRadar query);
+    CompletableFuture<String> overSpeed(RadarQuery.OverSpeedDetected query);
 }

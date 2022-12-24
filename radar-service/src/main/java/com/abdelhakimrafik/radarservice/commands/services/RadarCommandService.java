@@ -1,11 +1,7 @@
 package com.abdelhakimrafik.radarservice.commands.services;
 
-import com.abdelhakimrafik.commonapi.commands.radar.CreateRadarCommand;
-import com.abdelhakimrafik.commonapi.commands.radar.DeleteRadarCommand;
-import com.abdelhakimrafik.commonapi.commands.radar.UpdateRadarCommand;
-import com.abdelhakimrafik.commonapi.queries.radar.CreateRadarRequest;
-import com.abdelhakimrafik.commonapi.queries.radar.DeleteRadarRequest;
-import com.abdelhakimrafik.commonapi.queries.radar.UpdateRadarRequest;
+import com.abdelhakimrafik.commonapi.commands.RadarCommand;
+import com.abdelhakimrafik.commonapi.queries.RadarQuery;
 import org.axonframework.commandhandling.gateway.CommandGateway;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -19,27 +15,43 @@ public class RadarCommandService implements IRadarCommandService {
     private CommandGateway gateway;
 
     @Override
-    public CompletableFuture<String> createRadar(CreateRadarRequest request) {
-        return gateway.send(new CreateRadarCommand(
+    public CompletableFuture<String> createRadar(RadarQuery.CreateRadar query) {
+        return gateway.send(new RadarCommand.CreateRadar(
                 UUID.randomUUID().toString(),
-                request.getMaxSpeed(),
-                request.getLongitude(),
-                request.getLatitude()
+                query.getMaxSpeed(),
+                query.getLongitude(),
+                query.getLatitude(),
+                query.getStatus()
         ));
     }
 
     @Override
-    public CompletableFuture<String> updateRadar(UpdateRadarRequest request) {
-        return gateway.send(new UpdateRadarCommand(
-                request.getId(),
-                request.getMaxSpeed(),
-                request.getLongitude(),
-                request.getLatitude()
+    public CompletableFuture<String> updateRadar(RadarQuery.UpdateRadar query) {
+        return gateway.send(new RadarCommand.UpdateRadar(
+                query.getId(),
+                query.getMaxSpeed(),
+                query.getLongitude(),
+                query.getLatitude(),
+                query.getStatus()
         ));
     }
 
     @Override
-    public CompletableFuture<String> deleteRadar(DeleteRadarRequest request) {
-        return gateway.send(new DeleteRadarCommand(request.getId()));
+    public CompletableFuture<String> updateRadarStatus(RadarQuery.UpdateRadarStatus query) {
+        return gateway.send(new RadarCommand.UpdateRadarStatus(query.getId(), query.getStatus()));
+    }
+
+    @Override
+    public CompletableFuture<String> deleteRadar(RadarQuery.DeleteRadar query) {
+        return gateway.send(new RadarCommand.DeleteRadar(query.getId()));
+    }
+
+    @Override
+    public CompletableFuture<String> overSpeed(RadarQuery.OverSpeedDetected query) {
+        return gateway.send(new RadarCommand.OverSpeedDetected(
+                query.getRadar(),
+                query.getVehicleMatriculation(),
+                query.getSpeed()
+        ));
     }
 }
