@@ -17,6 +17,8 @@ services:
     environment:
       - KEYCLOAK_USER=admin
       - KEYCLOAK_PASSWORD=admin
+    networks:
+      - default-network
 
   discovery-service:
     build: ./discovery-service/
