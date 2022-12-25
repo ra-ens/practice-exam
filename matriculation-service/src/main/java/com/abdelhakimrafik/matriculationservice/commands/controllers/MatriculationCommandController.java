@@ -15,12 +15,12 @@ public class MatriculationCommandController {
 
     private MatriculationCommandService matriculationCommandService;
 
-    @PostMapping("vehicle")
+    @PostMapping("/vehicle")
     public CompletableFuture<String> createVehicle(@RequestBody MatriculationQuery.CreateVehicle query) {
         return matriculationCommandService.createVehicle(query);
     }
 
-    @PostMapping("owner")
+    @PostMapping("/owner")
     public CompletableFuture<String> newOwner(@RequestBody MatriculationQuery.NewOwner query) {
         return matriculationCommandService.newOwner(query);
     }

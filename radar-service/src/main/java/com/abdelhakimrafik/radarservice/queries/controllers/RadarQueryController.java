@@ -1,8 +1,8 @@
 package com.abdelhakimrafik.radarservice.queries.controllers;
 
-import com.abdelhakimrafik.commonapi.dtos.radar.EventDataResponseDTO;
-import com.abdelhakimrafik.commonapi.dtos.radar.OverSpeedDTO;
-import com.abdelhakimrafik.commonapi.dtos.radar.RadarDTO;
+import com.abdelhakimrafik.commonapi.dtos.EventDataResponseDTO;
+import com.abdelhakimrafik.commonapi.dtos.OverSpeedDTO;
+import com.abdelhakimrafik.commonapi.dtos.RadarDTO;
 import com.abdelhakimrafik.commonapi.queries.OverSpeedQuery;
 import com.abdelhakimrafik.commonapi.queries.RadarQuery;
 import lombok.AllArgsConstructor;

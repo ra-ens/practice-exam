@@ -10,5 +10,6 @@
     <file url="file://$PROJECT_DIR$/../radar-service/discovery-service/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/../radar-service/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/../radar-service/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../violation-service/src/main/java" charset="UTF-8" />
   </component>
 </project>

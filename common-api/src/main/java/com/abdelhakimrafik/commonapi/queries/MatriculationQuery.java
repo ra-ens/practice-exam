@@ -48,5 +48,5 @@ public abstract class MatriculationQuery {
         }
     }
 
-    public static class GetAllOwners {}
+    public static record GetAllOwners() {}
 }

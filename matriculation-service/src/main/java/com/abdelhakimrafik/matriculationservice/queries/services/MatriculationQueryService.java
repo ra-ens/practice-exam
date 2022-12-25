@@ -1,7 +1,7 @@
 package com.abdelhakimrafik.matriculationservice.queries.services;
 
-import com.abdelhakimrafik.commonapi.dtos.radar.OwnerDTO;
-import com.abdelhakimrafik.commonapi.dtos.radar.VehicleDTO;
+import com.abdelhakimrafik.commonapi.dtos.OwnerDTO;
+import com.abdelhakimrafik.commonapi.dtos.VehicleDTO;
 import com.abdelhakimrafik.commonapi.queries.MatriculationQuery;
 import com.abdelhakimrafik.matriculationservice.queries.mappers.OwnerMapper;
 import com.abdelhakimrafik.matriculationservice.queries.mappers.VehicleMapper;
@@ -35,6 +35,9 @@ public class MatriculationQueryService {
 
     @QueryHandler
     public List<OwnerDTO> getOwnerList(MatriculationQuery.GetAllOwners query) {
-        return ownerRepository.findAll().stream().map(owner -> ownerMapper.ownerToOwnerDTO(owner)).collect(Collectors.toList());
+        System.out.println(">>> called get all owners");
+        List<OwnerDTO> list = ownerRepository.findAll().stream().map(owner -> ownerMapper.ownerToOwnerDTO(owner)).collect(Collectors.toList());
+        System.out.println(list.size() + " >> " + list.get(0).getName());
+        return list;
     }
 }

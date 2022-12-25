@@ -9,6 +9,7 @@
         <outputRelativeToContentRoot value="true" />
         <module name="common-api" />
         <module name="radar-service" />
+        <module name="violation-service" />
         <module name="discovery-service" />
         <module name="gateway-service" />
         <module name="matriculation-service" />
@@ -20,6 +21,7 @@
       <module name="gateway-service" target="17" />
       <module name="matriculation-service" target="17" />
       <module name="radar-service" target="17" />
+      <module name="violation-service" target="17" />
     </bytecodeTargetLevel>
   </component>
   <component name="JavacSettings">
@@ -28,6 +30,7 @@
       <module name="gateway-service" options="-parameters" />
       <module name="matriculation-service" options="-parameters" />
       <module name="radar-service" options="-parameters" />
+      <module name="violation-service" options="-parameters" />
     </option>
   </component>
 </project>

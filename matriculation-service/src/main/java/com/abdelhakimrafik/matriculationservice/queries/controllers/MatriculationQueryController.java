@@ -1,11 +1,12 @@
 package com.abdelhakimrafik.matriculationservice.queries.controllers;
 
-import com.abdelhakimrafik.commonapi.dtos.radar.OwnerDTO;
-import com.abdelhakimrafik.commonapi.dtos.radar.VehicleDTO;
+import com.abdelhakimrafik.commonapi.dtos.OwnerDTO;
+import com.abdelhakimrafik.commonapi.dtos.VehicleDTO;
 import com.abdelhakimrafik.commonapi.queries.MatriculationQuery;
 import lombok.AllArgsConstructor;
 import org.axonframework.messaging.responsetypes.ResponseTypes;
 import org.axonframework.queryhandling.QueryGateway;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;

@@ -1,6 +1,6 @@
 package com.abdelhakimrafik.radarservice.queries.mappers;
 
-import com.abdelhakimrafik.commonapi.dtos.radar.OverSpeedDTO;
+import com.abdelhakimrafik.commonapi.dtos.OverSpeedDTO;
 import com.abdelhakimrafik.radarservice.queries.entities.OverSpeed;
 import org.mapstruct.Mapper;
 
